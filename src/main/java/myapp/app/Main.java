@@ -20,7 +20,6 @@ public class Main {
         } else {
             System.out.println("Le fichier est vide!");
         } */
-
         // System.out.format("Dans le fichier il y a %s fois 'al'\n", application.countAl(fileReader));
         /* System.out.format("Dans le fichier il y a %d mots", application.countWords(fileReader)); */
         /* System.out.println(Arrays.toString(application.read5Words(fileReader))); */

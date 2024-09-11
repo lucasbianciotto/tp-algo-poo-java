@@ -184,7 +184,7 @@ public class ApplicationTP1 {
     public void displayDirectoryContent(String directory) throws IOException {
         TextFileTools.walkDirectory(directory, new DisplayFileName());
     } */
-
+   
     /* Classe Anonyme
     public void displayDirectoryContent(String directory) throws IOException {
         TextFileTools.walkDirectory(directory, new ProcessFile() {
