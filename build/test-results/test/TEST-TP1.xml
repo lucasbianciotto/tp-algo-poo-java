@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TP1" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-11T12:14:14" hostname="MacBook-Air-de-BIANCIOTTO.local" time="0.022">
+<testsuite name="TP1" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-13T08:00:36" hostname="MacBook-Air-de-BIANCIOTTO.local" time="0.025">
   <properties/>
-  <testcase name="exo2()" classname="TP1" time="0.006"/>
+  <testcase name="exo2()" classname="TP1" time="0.007"/>
   <testcase name="exo3()" classname="TP1" time="0.001"/>
   <testcase name="exo4()" classname="TP1" time="0.003"/>
   <testcase name="exo5()" classname="TP1" time="0.004"/>
   <testcase name="exo6()" classname="TP1" time="0.0"/>
   <testcase name="exo7()" classname="TP1" time="0.0"/>
-  <testcase name="exo8()" classname="TP1" time="0.004"/>
+  <testcase name="exo8()" classname="TP1" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TP2" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-09-13T08:00:36" hostname="MacBook-Air-de-BIANCIOTTO.local" time="0.005">
+  <properties/>
+  <testcase name="delete()" classname="TP2" time="0.0"/>
+  <testcase name="addFirst()" classname="TP2" time="0.0"/>
+  <testcase name="contains()" classname="TP2" time="0.001"/>
+  <testcase name="add()" classname="TP2" time="0.0"/>
+  <testcase name="exo2()" classname="TP2" time="0.001"/>
+  <testcase name="exo3()" classname="TP2" time="0.001"/>
+  <testcase name="next()" classname="TP2" time="0.0"/>
+  <testcase name="findFirst()" classname="TP2" time="0.001"/>
+  <testcase name="hasNext()" classname="TP2" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
