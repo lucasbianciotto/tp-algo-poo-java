@@ -31,8 +31,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        var filename = args[0];
-        FileReader fileReader = new FileReader(filename);
+        /* var filename = args[0];
+        FileReader fileReader = new FileReader(filename); */
         /* ApplicationTP1 application = new ApplicationTP1(); */
         /* var currentChar = application.readChar(fileReader);
         if (currentChar != null) {
@@ -49,13 +49,15 @@ public class Main {
         /* application.displayDirectoryContent("textes"); */
         /* application.displayFilesWithWord("textes", "conformément"); */
 
-        try {
-            /* ApplicationTP2.exo3(fileReader); */
+        /* try {
+            ApplicationTP2.exo3(fileReader);
             ApplicationTP2.exo4("textes");
         } catch (EndOfListException e) {
             e.printStackTrace();
-        }
+        } */
 
-
+       /* ApplicationTP3.exo2("textes"); */
+       ApplicationTP3.exo3("textes", "rendre");
+       
     }
 }
