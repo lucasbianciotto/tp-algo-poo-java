@@ -49,7 +49,7 @@ public class Main {
         /* application.displayDirectoryContent("textes"); */
         /* application.displayFilesWithWord("textes", "conformément"); */
 
-        /* try {
+       /*  try {
             ApplicationTP2.exo3(fileReader);
             ApplicationTP2.exo4("textes");
         } catch (EndOfListException e) {
@@ -57,7 +57,9 @@ public class Main {
         } */
 
        /* ApplicationTP3.exo2("textes"); */
-       ApplicationTP3.exo3("textes", "rendre");
+       /* ApplicationTP3.exo3("textes", "rendre"); */
+
+       WebSearchEngine webSearchEngine = new WebSearchEngine("textes", 8282);
        
     }
 }

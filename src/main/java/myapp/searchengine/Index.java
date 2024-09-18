@@ -19,7 +19,7 @@ public class Index {
             Iterator<String> wordsList = new Iterator<>(TextFileTools.readFile(fileReader));
             while (wordsList.hasNext()) {
                 try {
-                    tree.insert(wordsList.next(), path.toString());
+                    tree.insert(wordsList.next(), file.toString());
                 } catch (EndOfListException e) {
                     break;
                 }

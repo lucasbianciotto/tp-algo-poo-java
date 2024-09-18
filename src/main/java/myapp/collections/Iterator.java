@@ -23,4 +23,13 @@ public class Iterator<T> {
     public boolean hasNext() {
         return current != null;
     }
+
+    public T previous() throws EndOfListException {
+        if (current == null) throw new EndOfListException();
+        T data = current.getData();
+        current = current.getPreviousElement();
+        return data;
+        
+    }
+
 }

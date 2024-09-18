@@ -3,7 +3,6 @@ import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import myapp.collections.Iterator;
 import myapp.searchengine.Index;
 import myapp.searchengine.Tree;
 

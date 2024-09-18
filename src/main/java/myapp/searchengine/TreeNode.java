@@ -6,7 +6,7 @@ public class TreeNode {
     private final String word;
     private TreeNode leftChild = null;
     private TreeNode rightChild = null;
-    private List<String> filesList = new List<>();
+    private List<WordWeigth> filesList = new List<>();
 
     public TreeNode(String word) {
         this.word = word;
@@ -32,11 +32,11 @@ public class TreeNode {
         this.rightChild = rightChild;
     }
 
-    public List<String> getFilesList() {
+    public List<WordWeigth> getFilesList() {
         return filesList;
     }
 
-    public void setFilesList(List<String> filesList) {
+    public void setFilesList(List<WordWeigth> filesList) {
         this.filesList = filesList;
     }
 

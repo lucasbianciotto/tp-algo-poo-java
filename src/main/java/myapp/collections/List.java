@@ -1,5 +1,7 @@
 package myapp.collections;
 
+import java.util.Comparator;
+
 public class List<T> {
     ListElement<T> head = null;
 
@@ -11,6 +13,7 @@ public class List<T> {
             ListElement<T> nextElement = head;
             head = newElement;
             newElement.setNextElement(nextElement);
+            nextElement.setPreviousElement(newElement);
         }
     }
 
@@ -25,6 +28,7 @@ public class List<T> {
             }
 
             loop.setNextElement(newElement);
+            newElement.setPreviousElement(loop);
         }
     }
 
@@ -55,13 +59,50 @@ public class List<T> {
             if (loop.getData().equals(data)) {
                 if (previousElement == null) { 
                     head = head.getNextElement();
+                    head.setPreviousElement(null);
                 } else {
                     previousElement.setNextElement(loop.getNextElement());
+                    loop.getNextElement().setPreviousElement(previousElement);
                 }
                 return;
             }
             previousElement = loop;
             loop = loop.getNextElement();
+        }
+    }
+
+    public void sort(Comparator<? super T> comparator) {
+        ListElement<T> loopElement = head;
+        while (loopElement.getNextElement() != null) {
+            ListElement<T> minElement = loopElement;
+            ListElement<T> innerLoopElement = loopElement.getNextElement();
+            while (innerLoopElement != null) {
+                if (comparator.compare(innerLoopElement.getData(), minElement.getData()) < 0) {
+                    minElement = innerLoopElement;
+                }
+                innerLoopElement = innerLoopElement.getNextElement();
+            }
+            if (minElement != loopElement) {
+                ListElement<T> prevCurrent = loopElement.getPreviousElement();
+                ListElement<T> nextMinElement = minElement.getNextElement();
+                ListElement<T> prevMinElement = minElement.getPreviousElement();
+                minElement.setNextElement(loopElement);
+                minElement.setPreviousElement(prevCurrent);
+                loopElement.setPreviousElement(minElement);
+                prevMinElement.setNextElement(nextMinElement);
+                if (nextMinElement != null) {
+                    nextMinElement.setPreviousElement(prevMinElement);
+                }
+                if (prevCurrent == null) {
+                    head = minElement;
+                } else {
+                    prevCurrent.setNextElement(minElement);
+                    loopElement.setPreviousElement(minElement);
+                }
+
+            } else {
+                loopElement = loopElement.getNextElement();
+            }
         }
     }
 

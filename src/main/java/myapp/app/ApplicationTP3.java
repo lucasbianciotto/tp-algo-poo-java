@@ -5,6 +5,7 @@ import java.io.IOException;
 import myapp.collections.EndOfListException;
 import myapp.collections.Iterator;
 import myapp.searchengine.Index;
+import myapp.searchengine.WordWeigth;
 
 public class ApplicationTP3 {
 
@@ -13,7 +14,7 @@ public class ApplicationTP3 {
         index.build(path);
         index.walk(node -> {
             var count = 0;
-            Iterator<String> files = new Iterator<>(node.getFilesList());
+            Iterator<WordWeigth> files = new Iterator<>(node.getFilesList());
             while (files.hasNext()) {
                 count++;
                 try {

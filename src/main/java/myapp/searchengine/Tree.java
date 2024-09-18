@@ -2,6 +2,8 @@ package myapp.searchengine;
 
 import java.util.function.Consumer;
 
+import myapp.collections.List;
+
 public class Tree {
     private TreeNode head = null;
 
@@ -10,22 +12,27 @@ public class Tree {
     }
 
     private TreeNode insert(TreeNode node, String word, String fileName) {
+        WordWeigth wordWeigth = new WordWeigth(fileName);
         if (node == null) {
-            node = new TreeNode(word);
-            node.getFilesList().add(fileName);
-            return node;
-        } 
-        var currentWord = node.getWord();
-        var compareWord = word.compareToIgnoreCase(currentWord);
-        if (compareWord == 0) {
-            var hasFile = node.getFilesList().contains(fileName);
-            if (!hasFile) node.getFilesList().add(fileName);
-        } else if (compareWord < 1) {
+            TreeNode newNode = new TreeNode(word);
+            newNode.getFilesList().add(wordWeigth);
+            return newNode;
+        }
+        String currentWord = node.getWord();
+        int result = word.compareToIgnoreCase(currentWord);
+        if (result == 0) {
+            WordWeigth currentWordWeigth = node.getFilesList().findFirst(wordWeigth);
+            if (currentWordWeigth == null) {
+                node.getFilesList().add(wordWeigth);
+            } else {
+                currentWordWeigth.setWeight(currentWordWeigth.getWeight()+1);
+            }
+            node.getFilesList().sort(WordWeigth::compareTo);
+        } else if (result < 0) {
             node.setLeftChild(insert(node.getLeftChild(), word, fileName));
         } else {
             node.setRightChild(insert(node.getRightChild(), word, fileName));
         }
-
         return node;
     }
 
